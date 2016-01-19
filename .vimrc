@@ -1,0 +1,10 @@
+syntax on
+set number
+set relativenumber
+set smarttab
+set ai
+set si
+set wrap
+set shiftwidth=4
+set tabstop=4
+colors evening
