@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+const int N = 507;
+
+int a[N][N];
+int g[N][N];
+int n, k;
+
+int main () {
+}
