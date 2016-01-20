@@ -10,6 +10,7 @@ struct mod
 	mod() {}
 	mod(int a) : x(a%MOD) {} 
 	mod operator+(const mod& b) const { return (num(x)+num(b.x))%MOD; }
+	mod operator-(const mod& b) const { return (MOD+num(x)-num(b.x))%MOD; }
 	mod operator*(const mod& b) const { return (num(x)*num(b.x))%MOD; }
 };
 
@@ -51,9 +52,8 @@ int main()
 		else if(c[i] < c[k]) qmn++;
 		else qma++;
 
-	for(int i=0;i<=T;i++)
-		if(qmn+i < p || qma+T-i-1 < t-p-1) continue;
-		else ans = ans + comb(qmn+i,p)*comb(qma+T-i-1, t-p-1);
-
+	ans = comb(n-1, t-1);
+	for(int i=p+1;i<t;i++) ans = ans - comb(qmn, i)*comb(qma + T-1, t-i-1);
+	for(int i=t-p;i<t;i++) ans = ans - comb(qma, i)*comb(qmn + T-1, t-i-1);
 	printf("%d\n", ans.x);
 }

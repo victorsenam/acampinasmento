@@ -96,8 +96,17 @@ int main () {
 	int f = lower_bound(v, v+n, aux) - v;
 	int ans = dfs(f);
 
-	printf("%d\n", ans);
-	for (int i = rs-1; i >= 0; i--)
-		printf("%d ", res[i]+1);
+	if (ans == INT_MAX) {
+		printf("Impossible\n");
+	} else {
+		printf("%d\n", ans);
+		for (int i = rs-1; i >= 0; i--) {
+			printf("%d", res[i]+1);
+			if (i)
+				printf(" ");
+			else
+				printf("\n");
+		}
+	}
 
 }
