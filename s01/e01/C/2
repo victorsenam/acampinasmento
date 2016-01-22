@@ -1,0 +1,11 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+const int MAX = 1000000000;
+
+int x, y;
+
+int main () {
+	
+}
