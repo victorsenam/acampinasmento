@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+struct evt {
+	int time;
+	int type;
+
+	bool operator > (const evt & ot) const {
+		return time < ot.time;
+	}
+};
+
+int n, m;
+int a, s;
+priority_queue<evt> ev;
+int cnt;
+int free;
+int 
+
+int main () {
+	scanf("%d %d", &n, &m);
+
+	for (int i = 0; i < n; i++) {
+		scanf("%d %d", &a, &s);
+
+		evt aux;
+		aux.time = a;
+		aux.type = 0;
+
+	}
+}
